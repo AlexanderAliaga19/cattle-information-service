@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- packete que trae metodos como para pluralizar y singularizar y convertir los datos a una forma mas natural-->
+        <PackageReference Include="EntityFrameworkCore.CreatedUpdatedDate" Version="8.0.0" />
+        <PackageReference Include="Humanizer" Version="3.0.10" />
+
+        <!-- packete que ayuda con la documentacion de los controllers que nos da un json -->
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10"/>
+
+        <!-- Packete que ayuda con la migraciones cuando cambia tu base de datos o entidades y nesecitas actualizarla-->
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+
+        <!-- packete que ayuda con la conexion y traduccion de codigo a sintaxis sql postgresSql donde trae como dependecia entity framework y relational -->
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+
+        <!-- packete para que funcione swagger -->
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="10.2.3" />
+        
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="CattleInformation\Application\" />
+    </ItemGroup>
+
+</Project>
